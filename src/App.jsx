@@ -1,0 +1,33 @@
+import React from "react";
+import Header from "./components/header";
+import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router";
+import Tictactoe from "./components/tictactoe"
+import RockPaperScissors from "./components/rockPaperScissors";
+const App = () => {
+  const router = createBrowserRouter(
+    [
+      {
+        path:'/',
+        index: true,
+        element: <Tictactoe />
+      },
+      {
+        path:"/rockpaperscissors",
+        element: <RockPaperScissors />
+      }
+    ]
+  )
+  return (
+    <div>
+      <div className="bg-black/95 h-full border ">
+        <div className="mx-5 lg:w-200 lg:m-auto pt-20 border-x border-yellow-200">
+          
+          <RouterProvider router={router}></RouterProvider>
+        </div>
+        
+      </div>
+    </div>
+  );
+};
+
+export default App;
