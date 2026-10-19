@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "./header";
 import Rock from "../assets/images/rock.png";
-import Paper from "../assets/images/paper.png";
+import Paper from "../assets/images/Paper.png";
 import Scissor from "../assets/images/Scissor.png";
 
 const images = {
