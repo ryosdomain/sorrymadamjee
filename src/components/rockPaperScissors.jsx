@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./header";
 import Rock from "../assets/images/rock.png";
 import Paper from "../assets/images/Paper.png";
@@ -15,7 +15,8 @@ const RockPaperScissors = () => {
   const [computer, setComputer] = useState("");
   const [result, setResult] = useState("");
   const [score, setScore] = useState({ you: 0, computer: 0 });
-
+  
+  
   function play(playerChoice) {
     const options = ["Rock", "Paper", "Scissors"];
     const computerChoice = options[Math.floor(Math.random() * 3)];

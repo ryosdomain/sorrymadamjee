@@ -3,10 +3,14 @@ import Header from "./components/header";
 import { BrowserRouter, createBrowserRouter, RouterProvider } from "react-router";
 import Tictactoe from "./components/tictactoe"
 import RockPaperScissors from "./components/rockPaperScissors";
+import Layout from "./components/layout";
 const App = () => {
   const router = createBrowserRouter(
     [
-      {
+      {path: '/',
+        element: <Layout />,
+        children:[
+          {
         path:'/',
         index: true,
         element: <Tictactoe />
@@ -15,6 +19,9 @@ const App = () => {
         path:"/rockpaperscissors",
         element: <RockPaperScissors />
       }
+        ]
+      }
+      
     ]
   )
   return (

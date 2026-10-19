@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Header from "./header";
 
 const tictactoe = () => {
   const [board, setBoard] = useState(Array(9).fill(""));
   const [turn, setTurn] = useState("X");
+  const [loading, setLoading] = useState(true)
+  
+    useEffect(() => {
+    
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); 
 
+    
+    return () => clearTimeout(timer);
+  }, []);
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -38,6 +48,7 @@ const tictactoe = () => {
   }
   return (
     <div>
+      
         <Header />
       <div className="mt-5 lg:mt-10 w-65 lg:w-90 m-auto text-center">
         <h1 className="text-4xl font-bold text-white/80 ">Tic Tac Toe</h1>
