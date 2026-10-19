@@ -51,12 +51,12 @@ const RockPaperScissors = () => {
     <div>
       <Header />
       <div className="my-10">
-        <div className="flex h-50 md:h-100 px-5 gap-5 mt-5">
+        <div className="flex h-50 md:h-100 px-2 md:px-5 gap-5 mt-5">
           <div className="bg-white w-full flex items-center justify-center flex-col">
             {player && (
               <img className="w-20 h-20 md:w-40 md:h-40" src={images[player]} alt={player} />
             )}
-            <h2 className=" lg:text-2xl font-bold">PLayer's Choise</h2>
+            <h2 className=" md:text-2xl text-center font-bold">PLayer's <br className="md:hidden"/> Choise</h2>
           </div>
           <div className="bg-white w-full flex items-center justify-center flex-col">
             {computer && (
@@ -66,7 +66,7 @@ const RockPaperScissors = () => {
                 alt={computer}
               />
             )}
-            <h2 className=" md:text-2xl font-bold">Computers's Choise</h2>
+            <h2 className=" md:text-2xl text-center font-bold">Computers's <br className="md:hidden"/> Choise</h2>
           </div>
         </div>
 
@@ -104,7 +104,7 @@ const RockPaperScissors = () => {
           </button>
         </div>
 
-        <button onClick={restart} className="bg-yellow-400/80 border border-y-amber-500 outline outline-yellow-400 outline-offset-2 shadow rounded-lg text-2xl my-5 px-2 py-1 ">
+        <button onClick={restart} className="bg-yellow-400/80 border mt-10 border-y-amber-500 outline outline-yellow-400 outline-offset-2 shadow rounded-lg text-2xl my-5 px-2 py-1 ">
           Restart
         </button>
       </div>

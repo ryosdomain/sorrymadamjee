@@ -39,7 +39,7 @@ const tictactoe = () => {
   return (
     <div>
         <Header />
-      <div className="mt-20 w-65 lg:w-90 m-auto text-center">
+      <div className="mt-5 lg:mt-10 w-65 lg:w-90 m-auto text-center">
         <h1 className="text-4xl font-bold text-white/80 ">Tic Tac Toe</h1>
         <h3 className="text-2xl text-white/80">{winner ? `Winner: ${winner}` : `Turn: ${turn}`}</h3>
 
@@ -51,14 +51,14 @@ const tictactoe = () => {
             <button
               key={i}
               onClick={() => play(i)}
-             className="bg-yellow-400/80 w-20 h-20 lg:h-28 lg:w-28 text-4xl rounded outline outline-yellow-400 outline-offset-1"
+             className="bg-yellow-200/80 w-20 h-20 lg:h-28 lg:w-28 text-4xl rounded outline outline-yellow-400 outline-offset-1"
             >
               {cell}
             </button>
           ))}
         </div>
 
-        <button onClick={restart} className="bg-yellow-400/80 border border-y-amber-500 outline outline-yellow-400 outline-offset-2 shadow rounded-lg text-2xl my-5 px-2 py-1 ">
+        <button onClick={restart} className="bg-yellow-400/80 border mt-10 border-y-amber-500 outline outline-yellow-400 outline-offset-2 shadow rounded-lg text-2xl my-5 px-2 py-1 ">
           Restart
         </button>
       </div>

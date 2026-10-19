@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div>
       <div className="bg-black/95 h-full border ">
-        <div className="mx-5 lg:w-200 lg:m-auto pt-20 border-x border-yellow-200">
+        <div className="mx-5 lg:w-200 lg:m-auto pt-10 border-x border-yellow-200">
           
           <RouterProvider router={router}></RouterProvider>
         </div>
